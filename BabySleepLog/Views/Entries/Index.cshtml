@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BabySleepLog.Models.Entry>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Entries";
 }
 
 <h2>Index</h2>
@@ -53,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.Notes)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.EntryId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EntryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EntryId })
         </td>
     </tr>
 }

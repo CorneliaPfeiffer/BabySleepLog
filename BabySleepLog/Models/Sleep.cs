@@ -15,6 +15,8 @@ namespace BabySleepLog.Models
             Afternoon = 4,
             Irregular = 5
         }
+        public Sleep()
+        { }
       
         public Sleep(SleepType sleepType, string name = null)
         {

@@ -136,6 +136,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704012210588_InitialCreate.cs" />
+    <Compile Include="Migrations\201704012210588_InitialCreate.Designer.cs">
+      <DependentUpon>201704012210588_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704012229149_Initial.cs" />
+    <Compile Include="Migrations\201704012229149_Initial.Designer.cs">
+      <DependentUpon>201704012229149_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entry.cs" />
     <Compile Include="Models\Sleep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,6 +152,10 @@
     <Compile Include="Repositories\SleepsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BabySleepLogDB.mdf" />
+    <Content Include="App_Data\BabySleepLogDB_log.ldf">
+      <DependentUpon>BabySleepLogDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-datepicker3.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -186,7 +199,12 @@
     <Content Include="Views\Entries\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201704012210588_InitialCreate.resx">
+      <DependentUpon>201704012210588_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704012229149_Initial.resx">
+      <DependentUpon>201704012229149_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
