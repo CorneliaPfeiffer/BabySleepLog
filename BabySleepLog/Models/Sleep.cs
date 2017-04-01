@@ -18,11 +18,11 @@ namespace BabySleepLog.Models
       
         public Sleep(SleepType sleepType, string name = null)
         {
-            Id = (int)sleepType;            
+            SleepId = (int)sleepType;            
             Name = name ?? sleepType.ToString();
         }
                
-        public int Id { get; set; }       
+        public int SleepId { get; set; }       
         public string Name { get; set; }
     }
 }

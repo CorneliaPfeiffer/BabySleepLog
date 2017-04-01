@@ -12,9 +12,9 @@ namespace BabySleepLog.Models
         }
      
         public Entry()
-        { }        
-        
-        public int Id { get; set; }
+        { }
+       
+        public int EntryId { get; set; }
         
         public DateTime Date { get; set; }
 
